@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IICS PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/da9e8af089.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- start home section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="logo.png" alt="LOGO"> -->
+                <h1>PORTFOLIO</h1>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#ab">About</a></li>
+                    <li><a href="#sr">Services</a></li>
+                    <li><a href="#ct">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="info">
+                <p>Web Developer/ Wordpress Developer</p>
+                <h2>Hi I'am <span>Khemchand Mahaur</span><br></h2>
+            </div>
+        </div>
+    </div>
+    <!-- End Home section -->
+
+    <!-- start about section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="left">
+                    <img src="img2.jpg">
+                    
+                </div>
+                <div class="right">
+                    <h2 class="sub-title" id="ab">About Me</h2>
+                    <p><br>I am Khemchand Mahaur from Delhi in India<br>
+                        <br>Recently I Pursuing my Diploma from IICS (INDIAN INSTITUE OF COMPUTER SCIENCE)<br>
+                        <br>Also, Graduate from (IGNOU)<br>
+                        <br>In Which i learned about MicroSoft Office,HTML,JAVASCRIPT,CSS,Wordpress.<br>
+                        
+                    </p>
+                    <div class="title">
+                        <p class="item active-item" onclick="opentab('skills')">Skills</p>
+                        <p class="item"  onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="contents active-contents" id="skills">
+                        <ul>
+                            <li><span>MicroSoft Office</span><br>MS Word/ MS Excel/ MS Powerpoint</li>
+                            <li><span>Web Development</span><br>Web Application Developer</li>
+                        </ul>
+                    </div>
+                    <div class="contents" id="education">
+                        <ul>
+                            <li><span>Complete</span><br>BA from (IGNOU)</li>
+                            <li><span>Pursuing</span><br>ADCE (Advanced Diploma in Computer Engineering) From 'IICS'</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End about section -->
+
+    <!-- Start Services section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title" id="sr">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>A web designer works on the appearance, layout, and, in some cases, content of a website. Appearance, for instance, relates to the colors, font, and images used.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-wordpress"></i>
+                    <h2>MS Office</h2>
+                    <p>Microsoft Office, or simply Office, is the former name of a family of client software, server software, and services developed by Microsoft. It was first announced by Bill Gates on August 1, 1988, at COMDEX in Las Vegas. Initially a marketing term for an office suite (bundled set of productivity applications), the first version of Office contained Microsoft Word, Microsoft Excel, and Microsoft PowerPoint. Over the years,.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <h2>Wordpress</h2>
+                    <p>WordPress is the simplest, most popular way to create your own website or blog. In fact, WordPress powers over 43.3% of all the websites on the Internet. </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Services Section -->
+
+    <!-- Start contact section -->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title" id="ct">Contact Me</h1>
+            <div class="row">
+                <div class="left-side">
+                    
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@portfolio.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 1234567890</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        
+                    </div>
+                    <a href="Khem Chand Mahaur.docx" class="btn" download>Download CV</a>
+                </div>
+                <div class="right-side">
+                    <form action="">
+                        <input type="text" name="Name" id="" placeholder="Your Name" required>
+                        <input type="email" name="Email" id="" placeholder="Your Email" required>
+                        <textarea name="Message" id="" cols="" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy <span style="color: #ff0404;">Khemchand Mahaur.</span></p>
+        </div>
+    </div>
+
+<script>
+
+    /*about section*/
+    var tabitems =document.getElementsByClassName("item");
+    var tabcontents =document.getElementsByClassName("contents");
+    function opentab(tabname){
+        for(tabitem of tabitems){
+            tabitem.classList.remove("active-item");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-contents");
+        }
+        event.currentTarget.classList.add("active-item");
+        document.getElementById(tabname).classList.add("active-contents");
+    }
+    /*end about section*/
+</script>
+</body>
+</html>
